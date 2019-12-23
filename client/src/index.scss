@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: "Cinzel", serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   background: $blue-charcoal;
+   color: white;
+   overflow-x: hidden;
+}
+
+a {
+   text-decoration: none;
+}
+
+.wrapper {
+   padding: 1.6rem;
+}
+
+.content {
+   max-width: 120rem;
+   margin: auto;
+   text-align: center;
+   padding: 5rem 0 0;
+}
+
+.footer {
+   text-align: center;
+   font-size: 1.4rem;
+   margin: 4rem 0;
+}
