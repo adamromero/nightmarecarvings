@@ -3,8 +3,8 @@ import { Link } from "@reach/router";
 //import "./Header.scss";
 
 import { StyledHeader } from "../styles/StyledHeader";
-//import { ReactComponent as Logo } from "./moon.svg";
-import pumpkinImage from "../../images/jack-o-lantern.png";
+import fullmoon from "../../images/full-moon.png";
+import witch from "../../images/witch.svg";
 
 const Header = () => {
    return (
@@ -13,9 +13,15 @@ const Header = () => {
             <div className="header__top">
                <h1 className="header--text">
                   <img
+                     className="flying-witch"
+                     src={witch}
+                     alt="Witch"
+                     width="50"
+                  />
+                  <img
                      className="header__image"
-                     src={pumpkinImage}
-                     alt="Pumpkin"
+                     src={fullmoon}
+                     alt="Full Moon"
                      width="65"
                   />
                   <Link to="/" className="header__title header--text-color">

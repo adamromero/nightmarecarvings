@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ProductModal from "../ProductModal/ProductModal";
 import { StyledPatterns } from "../styles/StyledPatterns";
-//import "./Patterns.scss";
 
 class Patterns extends Component {
    state = {
@@ -32,13 +31,14 @@ class Patterns extends Component {
                <div key={pattern.id} onClick={() => this.openModal(pattern)}>
                   <img src={pattern.image} alt={pattern.name} />
                   <div>{pattern.name}</div>
-                  <div>Difficulty: {pattern.difficulty}</div>
+                  <div>Difficulty: {pattern.difficulty}/5</div>
                </div>
             ))}
             <ProductModal
                show={this.state.showModal}
                onHide={this.hideModal}
                content={this.state.modalContent}
+               type="flipInX"
             />
          </StyledPatterns>
       );

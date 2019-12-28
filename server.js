@@ -17,25 +17,25 @@ app.get("/api/patterns", (req, res) => {
    const patterns = [
       {
          id: 1,
-         image: "https://via.placeholder.com/250?text=Coming+Soon",
+         image: "https://via.placeholder.com/150?text=Coming+Soon",
          name: "Vampire",
          difficulty: 3
       },
       {
          id: 2,
-         image: "https://via.placeholder.com/250?text=Coming+Soon",
+         image: "https://via.placeholder.com/150?text=Coming+Soon",
          name: "Witch",
          difficulty: 4
       },
       {
          id: 3,
-         image: "https://via.placeholder.com/250?text=Coming+Soon",
+         image: "https://via.placeholder.com/150?text=Coming+Soon",
          name: "Bat",
          difficulty: 2
       },
       {
          id: 4,
-         image: "https://via.placeholder.com/250?text=Coming+Soon",
+         image: "https://via.placeholder.com/150?text=Coming+Soon",
          name: "Happy Halloween!",
          difficulty: 4
       }

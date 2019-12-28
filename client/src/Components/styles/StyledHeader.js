@@ -57,11 +57,13 @@ export const StyledHeader = styled.header`
       font-weight: bold;
    }
 
-   .header--link-border {
-      border-bottom: 3px solid #f08405;
-      position: absolute;
-      top: 50%;
-      width: 100%;
+   @media (min-width: 40em) {
+      .header--link-border {
+         border-bottom: 3px solid #f08405;
+         position: absolute;
+         top: 50%;
+         width: 100%;
+      }
    }
 
    .header__categories {
@@ -78,10 +80,35 @@ export const StyledHeader = styled.header`
 
       @media (min-width: 40em) {
          position: relative;
-         top: 1rem;
-         right: 0.5rem;
+         top: 1.5rem;
+         right: 1rem;
          margin: 0;
          display: inline;
+      }
+   }
+
+   .flying-witch {
+      position: relative;
+      top: 0.8rem;
+      z-index: 999;
+      animation: flying-witch-animation 4s infinite;
+   }
+
+   @keyframes flying-witch-animation {
+      0% {
+         transform: translateX(0);
+      }
+      /*
+      25% {
+         transform: translateX(25%);
+      }
+
+      75% {
+         transform: translateX(75%);
+      }*/
+
+      100% {
+         transform: translateX(1500%);
       }
    }
 `;
