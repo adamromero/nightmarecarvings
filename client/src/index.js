@@ -13,6 +13,7 @@ import Account from "./Components/Account/Account";
 import Contact from "./Components/Contact/Contact";
 import Checkout from "./Components/Checkout/Checkout";
 import CartMenu from "./Components/CartMenu/CartMenu";
+import FAQ from "./Components/FAQ/FAQ";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -31,7 +32,7 @@ function App() {
                <Home path="/" />
                <Patterns path="patterns" />
                <About path="about" />
-               <Account path="account" />
+               <FAQ path="faq" />
                <Contact path="contact" />
                <Checkout path="checkout" />
             </Router>

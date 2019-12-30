@@ -90,8 +90,9 @@ export const StyledHeader = styled.header`
    .flying-witch {
       position: relative;
       top: 0.8rem;
+      transform: translateX(5rem);
       z-index: 999;
-      animation: flying-witch-animation 4s infinite;
+      animation: flying-witch-animation 4s 1;
    }
 
    @keyframes flying-witch-animation {

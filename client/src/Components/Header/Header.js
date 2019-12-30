@@ -45,7 +45,7 @@ const Header = () => {
                      About
                   </Link>
                   <Link
-                     to="account"
+                     to="faq"
                      className="header__link header--subtext header--text-color"
                   >
                      FAQ
