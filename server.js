@@ -19,25 +19,29 @@ app.get("/api/patterns", (req, res) => {
          id: 1,
          image: "https://via.placeholder.com/150?text=Coming+Soon",
          name: "Vampire",
-         difficulty: 3
+         difficulty: 3,
+         price: 1
       },
       {
          id: 2,
          image: "https://via.placeholder.com/150?text=Coming+Soon",
          name: "Witch",
-         difficulty: 4
+         difficulty: 4,
+         price: 1
       },
       {
          id: 3,
          image: "https://via.placeholder.com/150?text=Coming+Soon",
          name: "Bat",
-         difficulty: 2
+         difficulty: 2,
+         price: 1
       },
       {
          id: 4,
          image: "https://via.placeholder.com/150?text=Coming+Soon",
          name: "Happy Halloween!",
-         difficulty: 4
+         difficulty: 4,
+         price: 1
       }
    ];
 

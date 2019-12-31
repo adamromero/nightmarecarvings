@@ -22,4 +22,14 @@ export const StyledCartMenu = styled.nav`
       top: 2rem;
       left: -5rem;
    }
+
+   .header__cart-count {
+      font-family: Arial, Helvetica, sans-serif;
+      position: absolute;
+      top: -1.2rem;
+      left: 1.1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+   }
 `;

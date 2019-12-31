@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "@reach/router";
-//import "./Header.scss";
 
 import { StyledHeader } from "../styles/StyledHeader";
 import fullmoon from "../../images/full-moon.png";

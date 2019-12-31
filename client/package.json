@@ -36,6 +36,7 @@
       ]
    },
    "devDependencies": {
-      "react-animated-modal": "^1.1.1"
+      "react-animated-modal": "^1.1.1",
+      "react-use-cart": "^1.2.2"
    }
 }
