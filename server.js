@@ -3,43 +3,69 @@ const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.get("/api/customers", (req, res) => {
-   const customers = [
-      { id: 1, firstName: "John", lastName: "Doe" },
-      { id: 2, firstName: "Steve", lastName: "Smith" },
-      { id: 3, firstName: "Mary", lastName: "Swanson" }
-   ];
-
-   res.json(customers);
-});
-
 app.get("/api/patterns", (req, res) => {
    const patterns = [
       {
          id: 1,
-         image: "https://via.placeholder.com/150?text=Coming+Soon",
+         image:
+            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
          name: "Vampire",
          difficulty: 3,
          price: 1
       },
       {
          id: 2,
-         image: "https://via.placeholder.com/150?text=Coming+Soon",
+         image:
+            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
          name: "Witch",
          difficulty: 4,
          price: 1
       },
       {
          id: 3,
-         image: "https://via.placeholder.com/150?text=Coming+Soon",
+         image:
+            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
          name: "Bat",
          difficulty: 2,
          price: 1
       },
       {
          id: 4,
-         image: "https://via.placeholder.com/150?text=Coming+Soon",
+         image:
+            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
          name: "Happy Halloween!",
+         difficulty: 4,
+         price: 1
+      },
+      {
+         id: 5,
+         image:
+            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
+         name: "Skull",
+         difficulty: 3,
+         price: 1
+      },
+      {
+         id: 6,
+         image:
+            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
+         name: "Cat",
+         difficulty: 2,
+         price: 1
+      },
+      {
+         id: 7,
+         image:
+            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
+         name: "Zombie",
+         difficulty: 4,
+         price: 1
+      },
+      {
+         id: 8,
+         image:
+            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
+         name: "Castle",
          difficulty: 4,
          price: 1
       }

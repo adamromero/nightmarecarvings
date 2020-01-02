@@ -16,6 +16,10 @@ import Checkout from "./Components/Checkout/Checkout";
 import CartMenu from "./Components/CartMenu/CartMenu";
 import FAQ from "./Components/FAQ/FAQ";
 
+import { FaInstagram } from "react-icons/fa";
+import { IoLogoFacebook } from "react-icons/io";
+import { FiTwitter } from "react-icons/fi";
+
 import * as serviceWorker from "./serviceWorker";
 
 function App() {
@@ -36,7 +40,14 @@ function App() {
                </Router>
             </div>
             <footer className="footer">
-               &copy; {new Date().getFullYear()} Nightmare Carvings
+               <div className="footer__copyright">
+                  &copy; {new Date().getFullYear()} Nightmare Carvings
+               </div>
+               <div className="footer__social-media">
+                  <FaInstagram />
+                  <IoLogoFacebook />
+                  <FiTwitter />
+               </div>
             </footer>
             <CartMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
          </CartProvider>

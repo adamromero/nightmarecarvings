@@ -91,8 +91,13 @@ export const StyledHeader = styled.header`
       position: relative;
       top: 0.8rem;
       transform: translateX(5rem);
-      z-index: 999;
+      z-index: 10;
       animation: flying-witch-animation 4s 1;
+      display: none;
+
+      @media (min-width: 40em) {
+         display: inline;
+      }
    }
 
    @keyframes flying-witch-animation {

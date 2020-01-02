@@ -13,7 +13,7 @@ const Checkout = () => {
          <h2>Checkout</h2>
          {items.map(item => (
             <div key={item.id}>
-               <img src={item.image} alt={item.name} />
+               <img src={item.image} alt={item.name} width="150" />
                <div>{item.name}</div>
                <button onClick={() => removeItem(item.id)}>Remove Item</button>
             </div>

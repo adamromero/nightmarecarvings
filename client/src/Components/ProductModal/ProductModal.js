@@ -17,6 +17,7 @@ const ProductModal = props => {
                      className="modal-main__image"
                      src={props.content.image}
                      alt={props.content.name}
+                     width="150"
                   />
                   <div className="modal-main__add">
                      <div className="modal-main__price">
