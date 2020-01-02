@@ -1,7 +1,10 @@
 const express = require("express");
 const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 const app = express();
+const path = require("path");
 const port = process.env.PORT || 5000;
+
+app.use(express.static(path.join(__dirname, "../client/public")));
 
 app.get("/api/patterns", (req, res) => {
    const patterns = [
@@ -94,11 +97,8 @@ app.post("/charge", (req, res) => {
 });
 
 if (process.env.NODE_ENV === "production") {
-   app.use(express.static("client/public"));
-
-   const path = require("path");
    app.get("*", (req, res) => {
-      res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
+      res.sendFile(path.resolve(__dirname, "/client/public/index.html"));
    });
 }
 
