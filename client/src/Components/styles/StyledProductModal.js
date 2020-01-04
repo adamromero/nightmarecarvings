@@ -48,4 +48,9 @@ export const StyledProductModal = styled.div`
       font-size: 3rem;
       margin: 2rem 0 1.5rem;
    }
+
+   .modal-main__text {
+      display: flex;
+      align-items: center;
+   }
 `;
