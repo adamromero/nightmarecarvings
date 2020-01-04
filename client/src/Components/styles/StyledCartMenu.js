@@ -6,6 +6,7 @@ export const StyledCartMenu = styled.nav`
    max-width: 30rem;
    width: 100%;
    text-align: left;
+   font-size: 1.6rem;
    position: fixed;
    top: 0px;
    right: 0px;
@@ -47,5 +48,15 @@ export const StyledCartMenu = styled.nav`
       font-size: 2rem;
       text-align: center;
       color: #f08405;
+   }
+
+   .header__cart-content {
+      font-size: 1.6rem;
+      padding: 2rem 0;
+   }
+
+   .header__cart-item {
+      display: flex;
+      padding: 1rem 0;
    }
 `;

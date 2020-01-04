@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "@reach/router";
 
+import CartMenuContent from "../CartMenuContent/CartMenuContent";
+import { Buttons } from "../styles/Buttons";
 import { StyledCartMenu } from "../styles/StyledCartMenu";
 import { MdShoppingCart } from "react-icons/md";
 import { useCart } from "react-use-cart";
 
 const CartMenu = ({ isMenuOpen, setIsMenuOpen }) => {
-   const { totalItems, items, removeItem, cartTotal } = useCart();
+   const { totalItems } = useCart();
+
    return (
       <StyledCartMenu isMenuOpen={isMenuOpen}>
          <div
@@ -18,15 +21,12 @@ const CartMenu = ({ isMenuOpen, setIsMenuOpen }) => {
                {totalItems > 0 ? totalItems : ""}
             </div>
          </div>
+
          <h2 className="header__cart-heading">Cart Items</h2>
-         {items.map(item => (
-            <div key={item.id}>
-               <img src={item.image} alt={item.name} width="100" />
-               <div>{item.name}</div>
-               <button onClick={() => removeItem(item.id)}>Remove Item</button>
-            </div>
-         ))}
-         <Link to="checkout">Checkout</Link>
+         <CartMenuContent />
+         <Link to="checkout">
+            <Buttons>Checkout</Buttons>
+         </Link>
       </StyledCartMenu>
    );
 };
