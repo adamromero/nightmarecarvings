@@ -22,9 +22,12 @@ export const StyledPatterns = styled.div`
    }
 
    .pumpkin {
-      color: #f08405;
       font-size: 2.2rem;
       position: relative;
       top: 0.3rem;
+   }
+
+   .pumpkin-fill {
+      color: #f08405;
    }
 `;

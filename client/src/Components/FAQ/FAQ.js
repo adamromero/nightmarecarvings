@@ -4,7 +4,7 @@ class FAQ extends Component {
    render() {
       return (
          <div>
-            <h2>FAQ</h2>
+            <h2>Frequently Asked Questions</h2>
             <div>
                Lorem Ipsum is simply dummy text of the printing and typesetting
                industry. Lorem Ipsum has been the industry's standard dummy text
