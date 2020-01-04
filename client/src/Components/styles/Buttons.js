@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Buttons = styled.div`
+export const Buttons = styled.button`
    background: #f08405;
    border: 0;
    padding: 1rem;
@@ -12,6 +12,11 @@ export const Buttons = styled.div`
    transition: 0.2s background;
 
    &:hover {
+      background: #e8aa5e;
+   }
+
+   &:disabled {
+      cursor: not-allowed;
       background: #e8aa5e;
    }
 `;

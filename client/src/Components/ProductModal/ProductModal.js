@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { StyledProductModal } from "../styles/StyledProductModal";
 import { Buttons } from "../styles/Buttons";
 import Modal from "react-animated-modal";
@@ -7,7 +7,14 @@ import { useCart } from "react-use-cart";
 import { GiPumpkin } from "react-icons/gi";
 
 const ProductModal = props => {
-   const { addItem } = useCart();
+   const { addItem, inCart } = useCart();
+   const [addToCartText, setAddToCartText] = useState(false);
+   const [disabledButton, setDisabledButton] = useState(false);
+
+   useEffect(() => {
+      setAddToCartText(inCart(props.content.id) ? "Item Added" : "Add to Cart");
+      setDisabledButton(inCart(props.content.id));
+   });
 
    const difficultyIcons = difficulty => {
       let a = [];
@@ -44,8 +51,18 @@ const ProductModal = props => {
                      <div className="modal-main__price">
                         ${props.content.price}.00
                      </div>
-                     <Buttons onClick={() => addItem(props.content)}>
-                        Add to Cart
+                     <Buttons
+                        disabled={disabledButton}
+                        onClick={() => {
+                           setTimeout(() => {
+                              setAddToCartText("Adding...");
+                              addItem(props.content);
+                              setAddToCartText("Item Added");
+                              setDisabledButton(true);
+                           }, 1000);
+                        }}
+                     >
+                        {addToCartText}
                      </Buttons>
                   </div>
                </div>
