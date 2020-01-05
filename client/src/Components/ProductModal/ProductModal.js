@@ -8,13 +8,13 @@ import { GiPumpkin } from "react-icons/gi";
 
 const ProductModal = props => {
    const { addItem, inCart } = useCart();
-   const [addToCartText, setAddToCartText] = useState(false);
+   const [addToCartText, setAddToCartText] = useState("Add to Cart");
    const [disabledButton, setDisabledButton] = useState(false);
 
    useEffect(() => {
       setAddToCartText(inCart(props.content.id) ? "Item Added" : "Add to Cart");
       setDisabledButton(inCart(props.content.id));
-   });
+   }, [props]);
 
    const difficultyIcons = difficulty => {
       let a = [];
@@ -54,8 +54,8 @@ const ProductModal = props => {
                      <Buttons
                         disabled={disabledButton}
                         onClick={() => {
+                           setAddToCartText("Adding...");
                            setTimeout(() => {
-                              setAddToCartText("Adding...");
                               addItem(props.content);
                               setAddToCartText("Item Added");
                               setDisabledButton(true);
