@@ -54,12 +54,9 @@ const ProductModal = props => {
                      <Buttons
                         disabled={disabledButton}
                         onClick={() => {
-                           setAddToCartText("Adding...");
-                           setTimeout(() => {
-                              addItem(props.content);
-                              setAddToCartText("Item Added");
-                              setDisabledButton(true);
-                           }, 1000);
+                           addItem(props.content);
+                           setAddToCartText("Item Added");
+                           setDisabledButton(true);
                         }}
                      >
                         {addToCartText}
