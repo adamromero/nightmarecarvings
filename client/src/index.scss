@@ -2,14 +2,16 @@
 
 html {
    font-size: 62.5%;
+   min-height: 100%;
+   position: relative;
 }
 
 body {
    font-family: "Cinzel", serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   background: $blue-charcoal;
-   color: white;
+   background: #f08405;
+   color: #000;
    overflow-x: hidden;
 }
 
@@ -18,15 +20,21 @@ a {
 }
 
 .wrapper {
-   padding: 0 1.6rem;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 
 .content {
+   flex: 1;
    max-width: 120rem;
+   width: 95%;
    margin: auto;
    text-align: center;
    padding: 5rem 0 0;
-   font-size: 1.2rem;
+   font-size: 1.4rem;
+   font-weight: bold;
+   line-height: 1.5;
    min-height: 50vh;
 
    @media (min-width: 40em) {
@@ -35,13 +43,14 @@ a {
 }
 
 .footer {
+   padding: 3.5rem 0;
    text-align: center;
    font-size: 1.4rem;
-   margin: 4rem 0;
 }
 
 .footer__copyright {
    font-size: 1.6rem;
+   font-weight: bold;
    padding: 0 0 2rem;
 }
 

@@ -16,7 +16,7 @@ const CartMenuContent = () => {
                <img src={item.image} alt={item.name} width="100" />
                <div>
                   <div>{item.name}</div>
-                  <div>${item.price}.00</div>
+                  <div>${(item.price * 0.01).toFixed(2)}</div>
                   <button onClick={() => removeItem(item.id)}>
                      Remove Item
                   </button>

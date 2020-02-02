@@ -1,6 +1,8 @@
 import React from "react";
 import { useCart } from "react-use-cart";
 
+import Stripe from "../Stripe/Stripe";
+
 const Checkout = () => {
    const { isEmpty, totalItems, items, removeItem, cartTotal } = useCart();
 
@@ -15,13 +17,15 @@ const Checkout = () => {
             <div key={item.id}>
                <img src={item.image} alt={item.name} width="150" />
                <div>{item.name}</div>
+               <div>${(item.price * 0.01).toFixed(2)}</div>
                <button onClick={() => removeItem(item.id)}>Remove Item</button>
             </div>
          ))}
          <br />
          <br />
          <div>Total Number of Items: {totalItems}</div>
-         <div>Total: ${cartTotal}.00</div>
+         <div>Total: ${(cartTotal * 0.01).toFixed(2)}</div>
+         <Stripe total={cartTotal} />
       </div>
    );
 };

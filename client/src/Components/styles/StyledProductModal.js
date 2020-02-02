@@ -16,6 +16,7 @@ export const StyledProductModal = styled.div`
    }
 
    .react-modal-body {
+      color: #fff;
       max-width: 70rem;
       padding: 3rem 4rem 4rem;
       box-sizing: border-box;

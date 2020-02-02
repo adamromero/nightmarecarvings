@@ -11,18 +11,6 @@ const Header = () => {
          <header className="header header--background">
             <div className="header__top">
                <h1 className="header--text">
-                  <img
-                     className="flying-witch"
-                     src={witch}
-                     alt="Witch"
-                     width="50"
-                  />
-                  <img
-                     className="header__image"
-                     src={fullmoon}
-                     alt="Full Moon"
-                     width="65"
-                  />
                   <Link to="/" className="header__title header--text-color">
                      Nightmare Carvings
                   </Link>

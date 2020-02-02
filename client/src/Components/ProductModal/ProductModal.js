@@ -17,8 +17,9 @@ const ProductModal = props => {
    }, [props]);
 
    const difficultyIcons = difficulty => {
+      const maxDifficulty = 5;
       let a = [];
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < maxDifficulty; i++) {
          a[i] =
             i < difficulty ? (
                <GiPumpkin key={i} className="pumpkin pumpkin-fill" />
@@ -49,7 +50,7 @@ const ProductModal = props => {
                   </div>
                   <div className="modal-main__add">
                      <div className="modal-main__price">
-                        ${props.content.price}.00
+                        ${(props.content.price * 0.01).toFixed(2)}
                      </div>
                      <Buttons
                         disabled={disabledButton}

@@ -24,7 +24,7 @@ export const StyledCartMenu = styled.nav`
    }
 
    .header__cart {
-      color: #f08405;
+      color: #fff;
       font-size: 3rem;
       cursor: pointer;
       position: absolute;
