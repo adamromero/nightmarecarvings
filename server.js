@@ -84,13 +84,6 @@ app.get("/api/patterns", (req, res) => {
    res.json(patterns);
 });
 
-app.get("/", (req, res) => {
-   res.send({
-      message: "Hello Stripe checkout server!",
-      timestamp: new Date().toISOString()
-   });
-});
-
 app.post("/checkout", async (req, res) => {
    console.log("Request:", req.body);
 
