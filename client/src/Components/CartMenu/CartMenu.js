@@ -24,9 +24,9 @@ const CartMenu = ({ isMenuOpen, setIsMenuOpen }) => {
 
          <h2 className="header__cart-heading">Cart Items</h2>
          <CartMenuContent />
-         <Link to="checkout">
+         <a href="/checkout">
             <Buttons>Checkout</Buttons>
-         </Link>
+         </a>
       </StyledCartMenu>
    );
 };

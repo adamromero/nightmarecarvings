@@ -10,8 +10,9 @@ body {
    font-family: "Cinzel", serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   background: #f08405;
-   color: #000;
+   //background: #f08405;
+   background: #000;
+   color: #fff;
    overflow-x: hidden;
 }
 
@@ -61,4 +62,9 @@ a {
    align-items: center;
    max-width: 20rem;
    margin: auto;
+}
+
+.carousel.carousel-slider {
+   max-width: 400px;
+   margin: auto !important;
 }
