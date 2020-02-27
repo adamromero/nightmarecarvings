@@ -37,7 +37,7 @@ class Patterns extends Component {
                         src={pattern.image}
                         alt={pattern.name}
                         onClick={() => this.openModal(pattern)}
-                        width="150"
+                        width="100"
                      />
                      <div>{pattern.name}</div>
                   </div>

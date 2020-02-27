@@ -13,7 +13,7 @@ export const StyledCartMenu = styled.nav`
    z-index: 99;
    background: #000;
    padding: 2rem;
-   border-left: 3px solid #f08405;
+   border-left: 3px solid #333333;
    box-sizing: border-box;
    transition: transform 0.2s ease-in-out 0s;
    transform: ${({ isMenuOpen }) =>
@@ -24,7 +24,7 @@ export const StyledCartMenu = styled.nav`
    }
 
    .header__cart {
-      color: #fff;
+      color: #000;
       font-size: 3rem;
       cursor: pointer;
       position: absolute;
@@ -40,7 +40,7 @@ export const StyledCartMenu = styled.nav`
       left: 1.1rem;
       font-size: 1.5rem;
       font-weight: bold;
-      color: #fff;
+      color: #000;
    }
 
    .header__cart-heading {

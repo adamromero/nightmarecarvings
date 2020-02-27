@@ -4,12 +4,12 @@ export const StyledHeader = styled.header`
    .header {
       padding: 1.2rem 0;
       position: relative;
-      background: #000;
+      background: #e88e06;
    }
 
    .header__title {
       margin: 0;
-      text-shadow: 2px 1px 5px #5d370c;
+      /*text-shadow: 2px 1px 5px #5d370c;*/
       text-decoration: none;
       text-align: center;
    }
@@ -24,7 +24,24 @@ export const StyledHeader = styled.header`
       margin: auto;
       position: relative;
       padding: 0 2.5rem;
-      background: #000;
+      background: #e88e06;
+      visibility: hidden;
+
+      @media screen and (min-width: 640px) {
+         visibility: visible;
+      }
+   }
+
+   .header__mobile-menu {
+      display: block;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      cursor: pointer;
+
+      @media screen and (min-width: 640px) {
+         display: none;
+      }
    }
 
    .header__link {
@@ -36,12 +53,12 @@ export const StyledHeader = styled.header`
    }
 
    .header--text-color {
-      color: #fff;
+      color: #000;
       transition: 0.2s color;
-
+      /*
       &:hover {
          color: #f08405;
-      }
+      }*/
    }
 
    .header--text {
@@ -61,7 +78,7 @@ export const StyledHeader = styled.header`
 
    @media (min-width: 40em) {
       .header--link-border {
-         border-bottom: 3px solid #fff;
+         border-bottom: 3px solid #000;
          position: absolute;
          top: 50%;
          width: 100%;

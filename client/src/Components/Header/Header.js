@@ -18,6 +18,7 @@ const Header = () => {
             </div>
             <div className="header__categories">
                <div className="header--link-border"></div>
+               <div className="header__mobile-menu">Menu</div>
                <div className="header__links">
                   <Link
                      to="patterns"

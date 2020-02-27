@@ -28,18 +28,18 @@ a {
 
 .content {
    flex: 1;
-   max-width: 120rem;
+   max-width: 114rem;
    width: 95%;
    margin: auto;
    text-align: center;
    padding: 5rem 0 0;
-   font-size: 1.4rem;
+   font-size: 1.2rem;
    font-weight: bold;
-   line-height: 1.5;
+   line-height: 1.8;
    min-height: 50vh;
 
    @media (min-width: 40em) {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
    }
 }
 

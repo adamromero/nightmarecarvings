@@ -6,7 +6,8 @@ class Home extends Component {
    render() {
       return (
          <div>
-            <h2>Welcome... to Nightmare Carvings...</h2>
+            <div>Welcome...</div>
+            <div>...to Nightmare Carvings</div>
             <Carousel>
                <div>
                   <img src="https://via.placeholder.com/350x250" width="350" />
