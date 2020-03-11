@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "@reach/router";
 
 import { StyledHeader } from "../styles/StyledHeader";
-import fullmoon from "../../images/full-moon.png";
-import witch from "../../images/witch.svg";
 
 const Header = () => {
    return (
