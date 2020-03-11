@@ -24,7 +24,7 @@ export const StyledCartMenu = styled.nav`
    }
 
    .header__cart {
-      color: #000;
+      color: #e88e06;
       font-size: 3rem;
       cursor: pointer;
       position: absolute;
@@ -40,7 +40,7 @@ export const StyledCartMenu = styled.nav`
       left: 1.1rem;
       font-size: 1.5rem;
       font-weight: bold;
-      color: #000;
+      color: #e88e06;
    }
 
    .header__cart-heading {

@@ -16,7 +16,7 @@ const Checkout = () => {
          <h2>Checkout</h2>
          {items.map(item => (
             <div key={item.id}>
-               <img src={item.image} alt={item.name} width="100" />
+               <img src={`images/${item.image}`} alt={item.name} width="100" />
                <div>{item.name}</div>
                <div>${(item.price * 0.01).toFixed(2)}</div>
                <Buttons onClick={() => removeItem(item.id)}>

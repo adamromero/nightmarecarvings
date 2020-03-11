@@ -4,7 +4,7 @@ export const StyledHeader = styled.header`
    .header {
       padding: 1.2rem 0;
       position: relative;
-      background: #e88e06;
+      background: #000;
    }
 
    .header__title {
@@ -24,7 +24,7 @@ export const StyledHeader = styled.header`
       margin: auto;
       position: relative;
       padding: 0 2.5rem;
-      background: #e88e06;
+      background: #000;
       visibility: hidden;
 
       @media screen and (min-width: 640px) {
@@ -53,7 +53,7 @@ export const StyledHeader = styled.header`
    }
 
    .header--text-color {
-      color: #000;
+      color: #e88e06;
       transition: 0.2s color;
       /*
       &:hover {
@@ -78,7 +78,7 @@ export const StyledHeader = styled.header`
 
    @media (min-width: 40em) {
       .header--link-border {
-         border-bottom: 3px solid #000;
+         border-bottom: 3px solid #e88e06;
          position: absolute;
          top: 50%;
          width: 100%;

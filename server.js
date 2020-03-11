@@ -10,6 +10,7 @@ const app = express();
 const path = require("path");
 const port = process.env.PORT || 5000;
 
+app.use(express.static(path.join(__dirname, "../client/public")));
 app.use(express.json());
 app.use(cors());
 
@@ -17,66 +18,58 @@ app.get("/api/patterns", (req, res) => {
    const patterns = [
       {
          id: 1,
-         image:
-            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
+         image: "vampire.png",
          name: "Vampire",
-         difficulty: 3,
+         difficulty: 4,
          price: 100
       },
       {
          id: 2,
-         image:
-            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
+         image: "vampires-bride.png",
+         name: "Vampires' Bride",
+         difficulty: 5,
+         price: 100
+      },
+      {
+         id: 3,
+         image: "witch.png",
          name: "Witch",
          difficulty: 4,
          price: 100
       },
       {
-         id: 3,
-         image:
-            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
+         id: 4,
+         image: "franken-bat.png",
          name: "Bat",
          difficulty: 2,
          price: 100
       },
       {
-         id: 4,
-         image:
-            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
-         name: "Happy Halloween!",
-         difficulty: 4,
-         price: 100
-      },
-      {
          id: 5,
-         image:
-            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
+         image: "skull.png",
          name: "Skull",
          difficulty: 3,
          price: 100
       },
       {
          id: 6,
-         image:
-            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
-         name: "Cat",
-         difficulty: 2,
+         image: "castle.png",
+         name: "Castle",
+         difficulty: 4,
          price: 100
       },
       {
          id: 7,
-         image:
-            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
-         name: "Zombie",
-         difficulty: 4,
+         image: "jack-o-lantern.png",
+         name: "Happy Halloween!",
+         difficulty: 3,
          price: 100
       },
       {
          id: 8,
-         image:
-            "http://res.freestockphotos.biz/pictures/12/12079-illustration-of-a-jack-o-lantern-pv.png",
-         name: "Castle",
-         difficulty: 4,
+         image: "jack-o-lantern.png",
+         name: "Cat",
+         difficulty: 2,
          price: 100
       }
    ];

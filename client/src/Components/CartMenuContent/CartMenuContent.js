@@ -44,7 +44,7 @@ const CartMenuContent = () => {
       <div className="header__cart-content">
          {items.map(item => (
             <div className="header__cart-item" key={item.id}>
-               <img src={item.image} alt={item.name} width="100" />
+               <img src={`images/${item.image}`} alt={item.name} width="100" />
                <div>
                   <div>{item.name}</div>
                   <div>${(item.price * 0.01).toFixed(2)}</div>

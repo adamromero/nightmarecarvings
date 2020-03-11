@@ -38,9 +38,9 @@ const ProductModal = props => {
                <div>
                   <img
                      className="modal-main__image"
-                     src={props.content.image}
+                     src={`images/${props.content.image}`}
                      alt={props.content.name}
-                     width="150"
+                     width="200"
                   />
                   <div>
                      Difficulty:{" "}

@@ -10,7 +10,7 @@ class Patterns extends Component {
    };
 
    componentDidMount() {
-      fetch("/api/patterns")
+      fetch("http://localhost:5000/api/patterns")
          .then(res => res.json())
          .then(patterns => this.setState({ patterns }));
    }
@@ -34,10 +34,10 @@ class Patterns extends Component {
                   <div key={pattern.id}>
                      <img
                         className="pattern-image"
-                        src={pattern.image}
+                        src={`images/${pattern.image}`}
                         alt={pattern.name}
                         onClick={() => this.openModal(pattern)}
-                        width="100"
+                        width="150"
                      />
                      <div>{pattern.name}</div>
                   </div>
