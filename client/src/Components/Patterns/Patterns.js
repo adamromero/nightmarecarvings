@@ -15,10 +15,22 @@ class Patterns extends Component {
             ? "https://nightmarecarvings.herokuapp.com/api/patterns"
             : "http://localhost:5000/api/patterns";
 
-      fetch(api)
+      fetch("/api/patterns")
          .then(res => res.json())
          .then(patterns => this.setState({ patterns }));
+
+      document.addEventListener("keydown", this.handleKeyDown, false);
    }
+
+   componentWillUnmount() {
+      document.removeEventListener("keydown", this.handleKeyDown, false);
+   }
+
+   handleKeyDown = e => {
+      if (e.keyCode === 27) {
+         this.setState({ showModal: false });
+      }
+   };
 
    openModal = pattern => {
       this.setState({ showModal: true, modalContent: pattern });
@@ -32,20 +44,23 @@ class Patterns extends Component {
       const { patterns } = this.state;
 
       return (
-         <div>
+         <>
             <h2>Select a pattern</h2>
             <StyledPatterns>
                {patterns.map(pattern => (
-                  <div key={pattern.id}>
+                  <button
+                     className="pattern-box"
+                     key={pattern.id}
+                     onClick={() => this.openModal(pattern)}
+                  >
                      <img
                         className="pattern-image"
                         src={`images/${pattern.image}`}
                         alt={pattern.name}
-                        onClick={() => this.openModal(pattern)}
                         width="150"
                      />
                      <div>{pattern.name}</div>
-                  </div>
+                  </button>
                ))}
                <ProductModal
                   show={this.state.showModal}
@@ -54,7 +69,7 @@ class Patterns extends Component {
                   type="flipInX"
                />
             </StyledPatterns>
-         </div>
+         </>
       );
    }
 }

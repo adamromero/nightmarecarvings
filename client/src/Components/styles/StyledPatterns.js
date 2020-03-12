@@ -21,6 +21,14 @@ export const StyledPatterns = styled.div`
       grid-template-columns: repeat(4, 1fr);
    }
 
+   .pattern-box {
+      -webkit-appearance: none;
+      color: #ffffff;
+      font-weight: bold;
+      background: #000000;
+      border: 0;
+   }
+
    .pattern-image {
       cursor: pointer;
    }

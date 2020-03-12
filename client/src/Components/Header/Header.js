@@ -7,6 +7,9 @@ const Header = () => {
    return (
       <StyledHeader>
          <header className="header header--background">
+            <a href="#maincontent" className="skip">
+               Skip to main content
+            </a>
             <div className="header__top">
                <h1 className="header--text">
                   <Link to="/" className="header__title header--text-color">

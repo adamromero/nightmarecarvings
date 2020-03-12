@@ -29,7 +29,7 @@ function App() {
       <div className="wrapper">
          <CartProvider id="cartProvider">
             <Header />
-            <div className="content">
+            <div id="maincontent" className="content">
                <Router>
                   <Home path="/" />
                   <Patterns path="patterns" />
