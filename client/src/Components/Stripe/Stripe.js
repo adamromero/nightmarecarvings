@@ -9,7 +9,7 @@ const Stripe = props => {
    async function handleToken(token, addresses) {
       const api =
          process.env.NODE_ENV === "production"
-            ? "https://nightmarecarvings.herokuapp.com/"
+            ? "https://nightmarecarvings.herokuapp.com/checkout"
             : "http://localhost:5000/checkout";
       const response = await axios.post(api, {
          token,

@@ -12,7 +12,7 @@ class Patterns extends Component {
    componentDidMount() {
       const api =
          process.env.NODE_ENV === "production"
-            ? "https://nightmarecarvings.herokuapp.com/"
+            ? "https://nightmarecarvings.herokuapp.com/api/patterns"
             : "http://localhost:5000/api/patterns";
 
       fetch(api)
