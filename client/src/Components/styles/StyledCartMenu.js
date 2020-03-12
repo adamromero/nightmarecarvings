@@ -40,7 +40,7 @@ export const StyledCartMenu = styled.nav`
       left: 1.1rem;
       font-size: 1.5rem;
       font-weight: bold;
-      color: #e88e06;
+      color: #ffffff;
    }
 
    .header__cart-heading {

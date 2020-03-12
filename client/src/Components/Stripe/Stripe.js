@@ -7,7 +7,11 @@ const Stripe = props => {
    const amount = props.total;
 
    async function handleToken(token, addresses) {
-      const response = await axios.post("http://localhost:5000/checkout", {
+      const api =
+         process.env.NODE_ENV === "production"
+            ? "https://nightmarecarvings.herokuapp.com/"
+            : "http://localhost:5000/checkout";
+      const response = await axios.post(api, {
          token,
          amount
       });
