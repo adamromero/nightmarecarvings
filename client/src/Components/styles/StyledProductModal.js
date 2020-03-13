@@ -20,7 +20,7 @@ export const StyledProductModal = styled.div`
       max-width: 70rem;
       padding: 3rem 4rem 4rem;
       box-sizing: border-box;
-      background: #00040c;
+      background: #000000;
 
       @media (min-width: 40em) {
          width: 100%;
