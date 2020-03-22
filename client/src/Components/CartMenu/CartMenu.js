@@ -1,32 +1,37 @@
 import React from "react";
-import { Link } from "@reach/router";
 
 import CartMenuContent from "../CartMenuContent/CartMenuContent";
-import { Buttons } from "../styles/Buttons";
 import { StyledCartMenu } from "../styles/StyledCartMenu";
-import { MdShoppingCart } from "react-icons/md";
+import { Buttons } from "../styles/Buttons";
 import { useCart } from "react-use-cart";
 
-const CartMenu = ({ isMenuOpen, setIsMenuOpen }) => {
+import { slide as Menu } from "react-burger-menu";
+
+import { MdShoppingCart } from "react-icons/md";
+
+const ShoppingCartIcon = () => {
    const { totalItems } = useCart();
 
    return (
-      <StyledCartMenu isMenuOpen={isMenuOpen}>
-         <div
-            className="header__cart cart-icon"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-         >
-            <MdShoppingCart />
-            <div className="header__cart-count">
-               {totalItems > 0 ? totalItems : ""}
-            </div>
+      <div className="header__cart cart-icon">
+         <div className="header__cart-count">
+            {totalItems > 0 ? totalItems : ""}
          </div>
+         <MdShoppingCart />
+      </div>
+   );
+};
 
-         <h2 className="header__cart-heading">Cart Items</h2>
-         <CartMenuContent />
-         <a href="/checkout">
-            <Buttons>Checkout</Buttons>
-         </a>
+const CartMenu = props => {
+   return (
+      <StyledCartMenu>
+         <Menu {...props} customBurgerIcon={<ShoppingCartIcon />} right>
+            <h2 className="header__cart-heading">Cart Items</h2>
+            <CartMenuContent />
+            <a href="/checkout">
+               <Buttons>Checkout</Buttons>
+            </a>
+         </Menu>
       </StyledCartMenu>
    );
 };

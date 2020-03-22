@@ -1,36 +1,48 @@
 import styled from "styled-components";
 
 export const StyledCartMenu = styled.nav`
-   transform: translateX(0px);
-   height: 100vh;
-   max-width: 30rem;
-   width: 100%;
-   text-align: left;
-   font-size: 1.6rem;
-   position: fixed;
-   top: 0px;
-   right: 0px;
-   z-index: 99;
-   background: #000;
-   padding: 2rem;
-   border-left: 3px solid #333333;
-   box-sizing: border-box;
-   transition: transform 0.2s ease-in-out 0s;
-   transform: ${({ isMenuOpen }) =>
-      isMenuOpen ? "translateX(0)" : "translateX(100%)"};
-
    a {
       color: #fff;
+   }
+
+   .bm-menu-wrap {
+      height: 100vh;
+      max-width: 35rem;
+      width: 100% !important;
+      text-align: left;
+      font-size: 1.6rem;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      z-index: 99;
+      background: #000;
+      padding: 2rem;
+      border-left: 3px solid #333333;
+      box-sizing: border-box;
+   }
+
+   .bm-cross {
+      background: white;
+   }
+
+   .bm-cross-button {
+      height: 24px;
+      width: 24px;
+   }
+
+   .bm-burger-button {
+      position: fixed;
+      width: 36px;
+      height: 30px;
+      right: 5px;
+      top: 18px;
    }
 
    .header__cart {
       color: #e88e06;
       font-size: 3rem;
       cursor: pointer;
-      position: absolute;
       z-index: 999;
-      top: 2rem;
-      left: -5rem;
    }
 
    .header__cart-count {

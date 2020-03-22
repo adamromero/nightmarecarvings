@@ -10,13 +10,13 @@ class Home extends Component {
             <div>...to Nightmare Carvings</div>
             <Carousel>
                <div>
-                  <img src="https://via.placeholder.com/350x250" width="350" />
+                  <img src="/images/vampire.png" alt="" />
                </div>
                <div>
-                  <img src="https://via.placeholder.com/350x250" width="350" />
+                  <img src="/images/skull.png" alt="" />
                </div>
                <div>
-                  <img src="https://via.placeholder.com/350x250" width="350" />
+                  <img src="/images/witch.png" alt="" />
                </div>
             </Carousel>
          </div>
