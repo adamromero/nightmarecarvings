@@ -67,7 +67,7 @@ app.get("/api/patterns", (req, res) => {
       },
       {
          id: 8,
-         image: "jack-o-lantern.png",
+         image: "cat.png",
          name: "Cat",
          difficulty: 2,
          price: 100
