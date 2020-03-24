@@ -4,6 +4,8 @@ import { useCart } from "react-use-cart";
 
 import Stripe from "../Stripe/Stripe";
 
+import { MdClose } from "react-icons/md";
+
 const Checkout = () => {
    const { isEmpty, totalItems, items, removeItem, cartTotal } = useCart();
 
@@ -14,21 +16,30 @@ const Checkout = () => {
    return (
       <div>
          <h2>Checkout</h2>
-         {items.map(item => (
-            <div key={item.id}>
-               <img src={`images/${item.image}`} alt={item.name} width="100" />
-               <div>{item.name}</div>
-               <div>${(item.price * 0.01).toFixed(2)}</div>
-               <Buttons onClick={() => removeItem(item.id)}>
-                  Remove Item
-               </Buttons>
+         <div className="checkout">
+            <div className="checkout__list">
+               {items.map(item => (
+                  <div className="checkout__item" key={item.id}>
+                     <img
+                        src={`images/${item.image}`}
+                        alt={item.name}
+                        width="100"
+                     />
+                     <div>{item.name}</div>
+                     <div>${(item.price * 0.01).toFixed(2)}</div>
+                     <MdClose
+                        onClick={() => removeItem(item.id)}
+                        aria-label="Remove Item"
+                     />
+                  </div>
+               ))}
             </div>
-         ))}
-         <br />
-         <br />
-         <div>Total Number of Items: {totalItems}</div>
-         <div>Total: ${(cartTotal * 0.01).toFixed(2)}</div>
-         <Stripe total={cartTotal} />
+            <div className="checkout__purchase">
+               <div>Total Number of Items: {totalItems}</div>
+               <div>Total: ${(cartTotal * 0.01).toFixed(2)}</div>
+               <Stripe total={cartTotal} />
+            </div>
+         </div>
       </div>
    );
 };
