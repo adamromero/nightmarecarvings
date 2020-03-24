@@ -34,8 +34,8 @@ export const StyledCartMenu = styled.nav`
       position: fixed;
       width: 36px;
       height: 30px;
-      right: 5px;
-      top: 18px;
+      right: 18px;
+      top: 24px;
    }
 
    .header__cart {
@@ -48,9 +48,9 @@ export const StyledCartMenu = styled.nav`
    .header__cart-count {
       font-family: Arial, Helvetica, sans-serif;
       position: absolute;
-      top: -1.2rem;
+      top: -1rem;
       left: 1.1rem;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: bold;
       color: #ffffff;
    }
@@ -60,6 +60,7 @@ export const StyledCartMenu = styled.nav`
       font-size: 2rem;
       text-align: center;
       color: #f08405;
+      outline: 0;
    }
 
    .header__cart-content {
@@ -70,5 +71,7 @@ export const StyledCartMenu = styled.nav`
    .header__cart-item {
       display: flex;
       padding: 1rem 0;
+      border-bottom: 1px solid #333333;
+      justify-content: space-between;
    }
 `;

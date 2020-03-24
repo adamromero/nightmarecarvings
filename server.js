@@ -21,56 +21,85 @@ app.get("/api/patterns", (req, res) => {
          image: "vampire.png",
          name: "Vampire",
          difficulty: 4,
-         price: 100
+         price: 100,
+         description: `A classic monster comes to life in this pattern.`
       },
       {
          id: 2,
          image: "vampires-bride.png",
          name: "Vampires' Bride",
          difficulty: 5,
-         price: 100
+         price: 100,
+         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco
+         laboris nisi ut aliquip ex ea commodo consequat.`
       },
       {
          id: 3,
          image: "witch.png",
          name: "Witch",
          difficulty: 4,
-         price: 100
+         price: 100,
+         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco
+         laboris nisi ut aliquip ex ea commodo consequat.`
       },
       {
          id: 4,
-         image: "franken-bat.png",
-         name: "Bat",
-         difficulty: 2,
-         price: 100
-      },
-      {
-         id: 5,
          image: "skull.png",
          name: "Skull",
          difficulty: 3,
-         price: 100
+         price: 100,
+         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco
+         laboris nisi ut aliquip ex ea commodo consequat.`
+      },
+      {
+         id: 5,
+         image: "franken-bat.png",
+         name: "Bat",
+         difficulty: 2,
+         price: 100,
+         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco
+         laboris nisi ut aliquip ex ea commodo consequat.`
       },
       {
          id: 6,
          image: "castle.png",
          name: "Castle",
          difficulty: 4,
-         price: 100
+         price: 100,
+         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco
+         laboris nisi ut aliquip ex ea commodo consequat.`
       },
       {
          id: 7,
          image: "happy-halloween.png",
          name: "Happy Halloween!",
          difficulty: 3,
-         price: 100
+         price: 100,
+         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco
+         laboris nisi ut aliquip ex ea commodo consequat.`
       },
       {
          id: 8,
          image: "jack-o-lantern.png",
          name: "Cat",
          difficulty: 2,
-         price: 100
+         price: 100,
+         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco
+         laboris nisi ut aliquip ex ea commodo consequat.`
       }
    ];
 
@@ -78,12 +107,9 @@ app.get("/api/patterns", (req, res) => {
 });
 
 app.post("/checkout", async (req, res) => {
-   console.log("Request:", req.body);
-
    let error;
    let status;
    try {
-      //const { product, token } = req.body;
       const { amount, token } = req.body;
 
       const customer = await stripe.customers.create({

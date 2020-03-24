@@ -3,6 +3,8 @@ import { Buttons } from "../styles/Buttons";
 
 import { useCart } from "react-use-cart";
 
+import { MdClose } from "react-icons/md";
+
 const CartMenuContent = () => {
    const { isEmpty, items, removeItem } = useCart();
 
@@ -18,10 +20,11 @@ const CartMenuContent = () => {
                <div>
                   <div>{item.name}</div>
                   <div>${(item.price * 0.01).toFixed(2)}</div>
-                  <Buttons onClick={() => removeItem(item.id)}>
-                     Remove Item
-                  </Buttons>
                </div>
+               <MdClose
+                  className="header__cart-remove"
+                  onClick={() => removeItem(item.id)}
+               />
             </div>
          ))}
       </div>

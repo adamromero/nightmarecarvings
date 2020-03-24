@@ -10,10 +10,10 @@ body {
    font-family: "Cinzel", serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   //background: #f08405;
    background: #000;
    color: #fff;
    overflow-x: hidden;
+   font-weight: bold;
 }
 
 a {
@@ -75,6 +75,7 @@ h2 {
 
 .content__text {
    font-family: Arial, Helvetica, sans-serif;
+   font-weight: normal;
 }
 
 .footer {
@@ -109,4 +110,9 @@ h2 {
 
 .carousel .thumbs {
    text-align: center;
+}
+
+.header__cart-remove {
+   font-size: 2.5rem;
+   cursor: pointer;
 }
