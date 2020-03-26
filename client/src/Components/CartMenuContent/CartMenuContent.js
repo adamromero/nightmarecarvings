@@ -22,7 +22,7 @@ const CartMenuContent = () => {
                   <div>${(item.price * 0.01).toFixed(2)}</div>
                </div>
                <MdClose
-                  className="header__cart-remove"
+                  className="remove-item"
                   onClick={() => removeItem(item.id)}
                />
             </div>

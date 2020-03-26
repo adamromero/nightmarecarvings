@@ -15,27 +15,42 @@ const Checkout = () => {
 
    return (
       <div>
-         <h2>Checkout</h2>
+         <h2>Checkout ({totalItems} items)</h2>
          <div className="checkout">
-            <div className="checkout__list">
-               {items.map(item => (
-                  <div className="checkout__item" key={item.id}>
-                     <img
-                        src={`images/${item.image}`}
-                        alt={item.name}
-                        width="100"
-                     />
-                     <div>{item.name}</div>
-                     <div>${(item.price * 0.01).toFixed(2)}</div>
-                     <MdClose
-                        onClick={() => removeItem(item.id)}
-                        aria-label="Remove Item"
-                     />
-                  </div>
-               ))}
-            </div>
+            <table className="checkout__list">
+               <thead>
+                  <tr>
+                     <th>Item</th>
+                     <th>Description</th>
+                     <th>Price</th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {items.map(item => (
+                     <tr className="checkout__item" key={item.id}>
+                        <td>
+                           <img
+                              src={`images/${item.image}`}
+                              alt={item.name}
+                              width="100"
+                           />
+                        </td>
+
+                        <td>{item.name}</td>
+                        <td>${(item.price * 0.01).toFixed(2)}</td>
+                        <td>
+                           <MdClose
+                              className="remove-item"
+                              onClick={() => removeItem(item.id)}
+                              aria-label="Remove Item"
+                           />
+                        </td>
+                     </tr>
+                  ))}
+               </tbody>
+            </table>
             <div className="checkout__purchase">
-               <div>Total Number of Items: {totalItems}</div>
                <div>Total: ${(cartTotal * 0.01).toFixed(2)}</div>
                <Stripe total={cartTotal} />
             </div>
