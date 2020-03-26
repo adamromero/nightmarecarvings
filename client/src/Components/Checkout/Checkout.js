@@ -7,7 +7,7 @@ import Stripe from "../Stripe/Stripe";
 import { MdClose } from "react-icons/md";
 
 const Checkout = () => {
-   const { isEmpty, totalItems, items, removeItem, cartTotal } = useCart();
+   const { isEmpty, totalItems, removeItem, items, cartTotal } = useCart();
 
    if (isEmpty) {
       return <div>Your cart is empty</div>;
@@ -15,7 +15,9 @@ const Checkout = () => {
 
    return (
       <div>
-         <h2>Checkout ({totalItems} items)</h2>
+         <h2>
+            Checkout ({totalItems} item{totalItems > 1 ? "s" : ""})
+         </h2>
          <div className="checkout">
             <table className="checkout__list">
                <thead>
@@ -40,11 +42,13 @@ const Checkout = () => {
                         <td>{item.name}</td>
                         <td>${(item.price * 0.01).toFixed(2)}</td>
                         <td>
-                           <MdClose
+                           <button
                               className="remove-item"
                               onClick={() => removeItem(item.id)}
                               aria-label="Remove Item"
-                           />
+                           >
+                              <MdClose />
+                           </button>
                         </td>
                      </tr>
                   ))}
