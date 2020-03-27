@@ -20,15 +20,18 @@ export const StyledHeader = styled.header`
       text-align: center;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
       max-width: 40rem;
       margin: auto;
       position: relative;
       padding: 0 2.5rem;
       background: #000;
-      visibility: hidden;
+      //visibility: hidden;
 
       @media screen and (min-width: 640px) {
          visibility: visible;
+         flex-direction: row;
       }
    }
 
@@ -46,9 +49,14 @@ export const StyledHeader = styled.header`
 
    .header__link {
       display: inline-flex;
+      padding: 1rem;
 
-      &:first-child {
+      @media (min-width: 40em) {
          padding: 0;
+
+         &:first-child {
+            padding: 0;
+         }
       }
    }
 

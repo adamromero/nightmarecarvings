@@ -63,12 +63,12 @@ h2 {
    width: 95%;
    margin: auto;
    text-align: center;
-   padding: 5rem 0 0;
    font-size: 1.4rem;
    line-height: 1.8;
    min-height: 69vh;
 
    @media (min-width: 40em) {
+      padding: 5rem 0 0;
       font-size: 1.6rem;
    }
 }
@@ -130,13 +130,19 @@ h2 {
 }
 
 .checkout {
-   display: flex;
-   justify-content: space-around;
+   @media (min-width: 40em) {
+      display: flex;
+      justify-content: space-around;
+   }
 }
 
 .checkout__list {
    border-collapse: collapse;
-   width: 75%;
+   width: 100%;
+
+   @media (min-width: 40em) {
+      width: 75%;
+   }
 
    thead {
       border-top: 1px solid #333333;
@@ -153,6 +159,14 @@ h2 {
       text-align: left;
       border-bottom: 1px solid #333333;
       padding: 1.6rem 0;
+   }
+}
+
+.checkout__purchase {
+   padding: 2rem 0 0;
+
+   @media (min-width: 40em) {
+      padding: 0;
    }
 }
 
