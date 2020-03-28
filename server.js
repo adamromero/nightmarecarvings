@@ -22,7 +22,8 @@ app.get("/api/patterns", (req, res) => {
          name: "Vampire",
          difficulty: 4,
          price: 100,
-         description: `A classic monster comes to life in this pattern.`
+         description: `Begin with carving out the eyes and teeth, then proceed with the vampire's right cheek. 
+         From here, you can then work on the ears, lower jaw and finally the rest of the face in smaller sections.`
       },
       {
          id: 2,
@@ -96,10 +97,7 @@ app.get("/api/patterns", (req, res) => {
          name: "Cat",
          difficulty: 2,
          price: 100,
-         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Ut enim ad minim veniam, quis nostrud exercitation ullamco
-         laboris nisi ut aliquip ex ea commodo consequat.`
+         description: `Begin carving on the eyes. Finish by carving out the background of the cat.`
       }
    ];
 

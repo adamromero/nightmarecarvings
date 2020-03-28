@@ -52,6 +52,7 @@ export const StyledProductModal = styled.div`
 
    .modal-main__text {
       display: flex;
+      flex-direction: column;
       align-items: center;
    }
 `;

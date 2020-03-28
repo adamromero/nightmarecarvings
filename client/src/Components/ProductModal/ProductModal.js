@@ -65,6 +65,7 @@ const ProductModal = props => {
                   </div>
                </div>
                <div className="modal-main__text">
+                  <div>Carving Tips:</div>
                   {props.content.description}
                </div>
             </div>
