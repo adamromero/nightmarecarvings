@@ -34,28 +34,33 @@ export const StyledCartMenu = styled.nav`
    .bm-burger-button {
       position: fixed;
       width: 36px;
-      height: 30px;
-      right: 0;
-      top: 18px;
+      height: 36px;
+      right: 8px;
+      top: 8px;
+      border: 2px solid orange;
+      border-radius: 22px;
+      background: black;
 
       @media (min-width: 40em) {
          right: 18px;
-         top: 24px;
+         top: 18px;
       }
    }
 
    .header__cart {
       color: #e88e06;
-      font-size: 3rem;
+      font-size: 2.2rem;
       cursor: pointer;
-      z-index: 999;
+      position: relative;
+      left: 7px;
+      top: 11px;
    }
 
    .header__cart-count {
       font-family: Arial, Helvetica, sans-serif;
       position: absolute;
       top: -1rem;
-      left: 1.1rem;
+      left: 7px;
       font-size: 1.3rem;
       font-weight: bold;
       color: #ffffff;

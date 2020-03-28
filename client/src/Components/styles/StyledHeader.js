@@ -2,14 +2,19 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
    .header {
-      padding: 1.2rem 0;
+      padding: 0 0 1.2rem;
       position: relative;
       background: #000;
+
+      @media screen and (min-width: 40em) {
+         padding: 1.2rem 0;
+      }
    }
 
    .header__menu-content {
       display: flex;
       flex-direction: column;
+
       @media screen and (min-width: 40em) {
          display: block;
       }
@@ -25,13 +30,11 @@ export const StyledHeader = styled.header`
 
    .header__links {
       list-style: none;
-      padding: 0;
       text-align: center;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       align-items: center;
-      max-width: 40rem;
       margin: auto;
       position: relative;
       padding: 0 2.5rem;
@@ -40,17 +43,21 @@ export const StyledHeader = styled.header`
       visibility: hidden;
       overflow: hidden;
       max-height: 0;
+      border-bottom: 2px solid #e88e06;
 
       &.header__links--open {
          visibility: visible;
          overflow: visible;
          max-height: 999px;
+         padding: 1.5rem;
       }
 
       @media screen and (min-width: 40em) {
+         max-width: 40rem;
          visibility: visible;
          flex-direction: row;
          max-height: initial;
+         border: 0;
 
          &.header__links--open {
             max-height: initial;
@@ -64,7 +71,9 @@ export const StyledHeader = styled.header`
       font-size: 1.6rem;
       font-weight: bold;
       cursor: pointer;
-      padding: 1rem;
+      padding: 2rem;
+      color: #e88e06;
+      border-bottom: 2px solid #e88e06;
 
       @media screen and (min-width: 40em) {
          display: none;
