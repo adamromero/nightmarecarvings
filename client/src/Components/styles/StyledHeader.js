@@ -7,8 +7,17 @@ export const StyledHeader = styled.header`
       background: #000;
    }
 
+   .header__menu-content {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: 40em) {
+         display: block;
+      }
+   }
+
    .header__title {
       margin: 0;
+      color: #e88e06;
       /*text-shadow: 2px 1px 5px #5d370c;*/
       text-decoration: none;
       text-align: center;
@@ -27,11 +36,25 @@ export const StyledHeader = styled.header`
       position: relative;
       padding: 0 2.5rem;
       background: #000;
-      //visibility: hidden;
+      transition: all 0.2s ease-in-out;
+      visibility: hidden;
+      overflow: hidden;
+      max-height: 0;
 
-      @media screen and (min-width: 640px) {
+      &.header__links--open {
+         visibility: visible;
+         overflow: visible;
+         max-height: 999px;
+      }
+
+      @media screen and (min-width: 40em) {
          visibility: visible;
          flex-direction: row;
+         max-height: initial;
+
+         &.header__links--open {
+            max-height: initial;
+         }
       }
    }
 
@@ -41,8 +64,9 @@ export const StyledHeader = styled.header`
       font-size: 1.6rem;
       font-weight: bold;
       cursor: pointer;
+      padding: 1rem;
 
-      @media screen and (min-width: 640px) {
+      @media screen and (min-width: 40em) {
          display: none;
       }
    }
@@ -73,7 +97,7 @@ export const StyledHeader = styled.header`
       font-size: 2rem;
       text-align: center;
 
-      @media (min-width: 40em) {
+      @media screen and (min-width: 40em) {
          font-size: 2.5rem;
          margin: 1.2rem 0;
       }
@@ -82,9 +106,14 @@ export const StyledHeader = styled.header`
    .header--subtext {
       font-size: 1.7rem;
       font-weight: bold;
+      color: white;
+
+      @media screen and (min-width: 40em) {
+         color: #e88e06;
+      }
    }
 
-   @media (min-width: 40em) {
+   @media screen and (min-width: 40em) {
       .header--link-border {
          border-bottom: 3px solid #e88e06;
          position: absolute;
@@ -95,17 +124,26 @@ export const StyledHeader = styled.header`
 
    .header__categories {
       position: relative;
+      order: 0;
+      @media screen and (min-width: 40em) {
+         order: unset;
+      }
    }
 
    .header__top {
       position: relative;
+      order: 1;
+
+      @media screen and (min-width: 40em) {
+         order: unset;
+      }
    }
 
    .header__image {
       margin: 0 auto 1rem;
       display: block;
 
-      @media (min-width: 40em) {
+      @media screen and (min-width: 40em) {
          position: relative;
          top: 1.5rem;
          right: 1rem;
@@ -122,7 +160,7 @@ export const StyledHeader = styled.header`
       animation: flying-witch-animation 4s 1;
       display: none;
 
-      @media (min-width: 40em) {
+      @media screen and (min-width: 40em) {
          display: inline;
       }
    }

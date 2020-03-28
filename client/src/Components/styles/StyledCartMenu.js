@@ -34,8 +34,13 @@ export const StyledCartMenu = styled.nav`
       position: fixed;
       width: 36px;
       height: 30px;
-      right: 18px;
-      top: 24px;
+      right: 0;
+      top: 18px;
+
+      @media (min-width: 40em) {
+         right: 18px;
+         top: 24px;
+      }
    }
 
    .header__cart {
