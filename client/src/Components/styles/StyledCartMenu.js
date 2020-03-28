@@ -19,6 +19,7 @@ export const StyledCartMenu = styled.nav`
       padding: 2rem;
       border-left: 3px solid #333333;
       box-sizing: border-box;
+      transition: all 0.2s ease 0s !important;
    }
 
    .bm-cross {
@@ -69,14 +70,16 @@ export const StyledCartMenu = styled.nav`
    }
 
    .header__cart-content {
+      border-collapse: collapse;
       font-size: 1.6rem;
-      padding: 2rem 0;
+      margin: 2rem 0;
+      width: 100%;
    }
 
    .header__cart-item {
-      display: flex;
-      padding: 1rem 0;
-      border-bottom: 1px solid #333333;
-      justify-content: space-between;
+      td {
+         padding: 1rem 0;
+         border-bottom: 1px solid #333333;
+      }
    }
 `;

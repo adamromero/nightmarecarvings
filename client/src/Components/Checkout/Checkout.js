@@ -1,5 +1,4 @@
 import React from "react";
-import { Buttons } from "../styles/Buttons";
 import { useCart } from "react-use-cart";
 
 import Stripe from "../Stripe/Stripe";

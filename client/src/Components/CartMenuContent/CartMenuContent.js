@@ -1,5 +1,4 @@
 import React from "react";
-import { Buttons } from "../styles/Buttons";
 
 import { useCart } from "react-use-cart";
 
@@ -9,27 +8,37 @@ const CartMenuContent = () => {
    const { isEmpty, items, removeItem } = useCart();
 
    if (isEmpty) {
-      return <div className="header__cart-content">Your cart is empty</div>;
+      return <div>Your cart is empty</div>;
    }
 
    return (
-      <div className="header__cart-content">
-         {items.map(item => (
-            <div className="header__cart-item" key={item.id}>
-               <img src={`images/${item.image}`} alt={item.name} width="100" />
-               <div>
-                  <div>{item.name}</div>
-                  <div>${(item.price * 0.01).toFixed(2)}</div>
-               </div>
-               <button
-                  className="remove-item"
-                  onClick={() => removeItem(item.id)}
-               >
-                  <MdClose />
-               </button>
-            </div>
-         ))}
-      </div>
+      <table className="header__cart-content">
+         <tbody>
+            {items.map(item => (
+               <tr className="header__cart-item" key={item.id}>
+                  <td>
+                     <img
+                        src={`images/${item.image}`}
+                        alt={item.name}
+                        width="100"
+                     />
+                  </td>
+                  <td>
+                     <div>{item.name}</div>
+                     <div>${(item.price * 0.01).toFixed(2)}</div>
+                  </td>
+                  <td>
+                     <button
+                        className="remove-item"
+                        onClick={() => removeItem(item.id)}
+                     >
+                        <MdClose />
+                     </button>
+                  </td>
+               </tr>
+            ))}
+         </tbody>
+      </table>
    );
 };
 

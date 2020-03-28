@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { Router } from "@reach/router";
 import { CartProvider } from "react-use-cart";
@@ -29,7 +29,6 @@ function App() {
                pageWrapId={"page-wrap"}
                outerContainerId={"cartProvider"}
             />
-
             <div id="page-wrap">
                <Header />
                <div id="maincontent" className="content">
