@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 export const StyledProductModal = styled.div`
-   .ReactModal__Content {
-      background: none !important;
-      position: inherit !important;
-   }
-
    .animate-modal-overlay-enter-done {
       opacity: 0.5;
    }
@@ -30,34 +25,5 @@ export const StyledProductModal = styled.div`
       @media (min-width: 40em) {
          width: 100%;
       }
-   }
-
-   .modal-main {
-      @media (min-width: 40em) {
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-      }
-   }
-
-   .modal-main__image {
-      display: block;
-      margin: 0 auto 2rem;
-   }
-
-   .modal-main__add {
-      display: flex;
-      width: 24rem;
-      margin: auto;
-   }
-
-   .modal-main__price {
-      font-size: 3rem;
-      margin: 2rem 0 1.5rem;
-   }
-
-   .modal-main__text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
    }
 `;

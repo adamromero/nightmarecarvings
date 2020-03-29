@@ -13,19 +13,7 @@ class Patterns extends Component {
       fetch("/api/patterns")
          .then(res => res.json())
          .then(patterns => this.setState({ patterns }));
-
-      document.addEventListener("keydown", this.handleKeyDown, false);
    }
-
-   componentWillUnmount() {
-      document.removeEventListener("keydown", this.handleKeyDown, false);
-   }
-
-   handleKeyDown = e => {
-      if (e.keyCode === 27) {
-         this.setState({ showModal: false });
-      }
-   };
 
    openModal = pattern => {
       this.setState({ showModal: true, modalContent: pattern });

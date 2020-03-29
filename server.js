@@ -28,7 +28,7 @@ app.get("/api/patterns", (req, res) => {
       {
          id: 2,
          image: "vampires-bride.png",
-         name: "Vampires' Bride",
+         name: "Vampires' Wife",
          difficulty: 5,
          price: 100,
          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed

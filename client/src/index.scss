@@ -191,3 +191,84 @@ h2 {
       font-size: 1.6rem !important;
    }
 }
+
+//product modal
+
+.ReactModal__Overlay {
+   background-color: rgba(51, 51, 51, 0.5) !important;
+}
+
+.ReactModal__Content {
+   background: #000 !important;
+   position: inherit !important;
+   top: 0 !important;
+   left: 0 !important;
+   right: 0 !important;
+   animation-name: fadeInUp;
+   animation-duration: 0.5s;
+   color: #fff;
+   width: 90%;
+   max-height: 75%;
+   padding: 3rem 4rem 4rem !important;
+   box-sizing: border-box;
+   background: #000000;
+   border-radius: 4px;
+   z-index: 103;
+   margin: auto;
+   border: 0 !important;
+   text-align: center;
+   font-size: 1.6rem;
+
+   @media (min-width: 40em) {
+      font-size: 1.8rem;
+      width: 100%;
+      max-width: 70rem;
+      max-height: 48.5rem;
+   }
+}
+
+.modal-main {
+   @media (min-width: 40em) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      line-height: 1.8;
+   }
+}
+
+.modal-main__image {
+   display: block;
+   margin: 0 auto 2rem;
+}
+
+.modal-main__add {
+   display: flex;
+   width: 24rem;
+   margin: auto;
+}
+
+.modal-main__price {
+   font-size: 3rem;
+   margin: 2rem 0 1.5rem;
+}
+
+.modal-main__text {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.pumpkin {
+   font-size: 2.2rem;
+   position: relative;
+   top: 0.3rem;
+}
+
+.pumpkin-fill {
+   color: #f08405;
+}
+
+.remove-item--modal {
+   position: absolute;
+   right: 6px;
+   top: 6px;
+}

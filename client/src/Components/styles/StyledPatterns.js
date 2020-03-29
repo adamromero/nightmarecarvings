@@ -27,19 +27,21 @@ export const StyledPatterns = styled.div`
       font-weight: bold;
       background: #000000;
       border: 0;
+      animation-name: zoomInModified;
+      animation-duration: 0.5s;
    }
 
    .pattern-image {
       cursor: pointer;
    }
 
-   .pumpkin {
-      font-size: 2.2rem;
-      position: relative;
-      top: 0.3rem;
-   }
-
-   .pumpkin-fill {
-      color: #f08405;
+   @keyframes zoomInModified {
+      0% {
+         opacity: 0;
+         transform: scale3d(0.7, 0.7, 0.7);
+      }
+      100% {
+         opacity: 1;
+      }
    }
 `;
