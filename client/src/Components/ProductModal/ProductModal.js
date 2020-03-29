@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { StyledProductModal } from "../styles/StyledProductModal";
 import { Buttons } from "../styles/Buttons";
-import Modal from "react-animated-modal";
+import Modal from "react-modal";
+import AnimationModal from "react-animated-modal";
 import { useCart } from "react-use-cart";
 
 import { GiPumpkin } from "react-icons/gi";
@@ -32,7 +33,11 @@ const ProductModal = props => {
 
    return (
       <StyledProductModal>
-         <Modal visible={props.show} closemodal={props.onHide} type="fadeInUp">
+         <AnimationModal
+            visible={props.show}
+            closemodal={props.onHide}
+            type="fadeInUp"
+         >
             <h2>{props.content.name}</h2>
             <div className="modal-main">
                <div>
@@ -69,7 +74,7 @@ const ProductModal = props => {
                   {props.content.description}
                </div>
             </div>
-         </Modal>
+         </AnimationModal>
       </StyledProductModal>
    );
 };

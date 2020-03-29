@@ -12,6 +12,9 @@ const Header = () => {
             <a href="#maincontent" className="skip">
                Skip to main content
             </a>
+            <a href="#cartMenu" className="skip">
+               Skip to cart
+            </a>
             <div className="header__menu-content">
                <div className="header__top">
                   <h1 className="header--text">
@@ -36,6 +39,7 @@ const Header = () => {
                      <Link
                         to="about"
                         className="header__link header--subtext header--text-color"
+                        aria-label="About this website"
                      >
                         About
                      </Link>

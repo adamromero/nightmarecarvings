@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import CartMenuContent from "../CartMenuContent/CartMenuContent";
 import { StyledCartMenu } from "../styles/StyledCartMenu";
@@ -23,10 +23,16 @@ const ShoppingCartIcon = () => {
 };
 
 const CartMenu = props => {
+   useEffect(() => {
+      document
+         .querySelector(".header__cart")
+         .nextElementSibling.setAttribute("id", "cartMenu");
+   });
+
    return (
       <StyledCartMenu>
          <Menu {...props} customBurgerIcon={<ShoppingCartIcon />} right>
-            <h2 className="header__cart-heading">Cart Items</h2>
+            <h1 className="header__cart-heading">Cart Items</h1>
             <CartMenuContent />
             <a href="/checkout">
                <Buttons>Checkout</Buttons>

@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const StyledProductModal = styled.div`
+   .ReactModal__Content {
+      background: none !important;
+      position: inherit !important;
+   }
+
    .animate-modal-overlay-enter-done {
       opacity: 0.5;
    }
