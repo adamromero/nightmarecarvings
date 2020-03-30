@@ -6,8 +6,9 @@ class Home extends Component {
    render() {
       return (
          <div>
-            <div>Welcome...</div>
-            <div>...to Nightmare Carvings</div>
+            <div className="welcome-message">
+               Welcome to Nightmare Carvings...
+            </div>
             <Carousel>
                <div>
                   <img src="/images/vampire.png" alt="" />
