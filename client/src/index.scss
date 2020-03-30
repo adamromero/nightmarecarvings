@@ -196,6 +196,7 @@ h2 {
 
 .ReactModal__Overlay {
    background-color: rgba(51, 51, 51, 0.5) !important;
+   z-index: 9999;
 }
 
 .ReactModal__Content {

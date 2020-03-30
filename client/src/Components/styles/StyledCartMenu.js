@@ -37,7 +37,6 @@ export const StyledCartMenu = styled.nav`
       height: 36px;
       right: 8px;
       top: 8px;
-      border: 2px solid orange;
       border-radius: 22px;
       background: black;
 
@@ -72,6 +71,11 @@ export const StyledCartMenu = styled.nav`
       text-align: center;
       color: #f08405;
       outline: 0;
+   }
+
+   .header__cart-empty {
+      padding: 2rem 0;
+      text-align: center;
    }
 
    .header__cart-content {

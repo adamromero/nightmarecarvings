@@ -8,7 +8,7 @@ const CartMenuContent = () => {
    const { isEmpty, items, removeItem } = useCart();
 
    if (isEmpty) {
-      return <div>Your cart is empty</div>;
+      return <div className="header__cart-empty">Your cart is empty</div>;
    }
 
    return (
