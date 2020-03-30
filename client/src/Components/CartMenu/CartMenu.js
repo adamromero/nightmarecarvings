@@ -34,8 +34,8 @@ const CartMenu = props => {
          <Menu {...props} customBurgerIcon={<ShoppingCartIcon />} right>
             <h1 className="header__cart-heading">Cart Items</h1>
             <CartMenuContent />
-            <a href="/checkout">
-               <Buttons>Checkout</Buttons>
+            <a href="/checkout" tabIndex="-1">
+               <Buttons width="100%">Checkout</Buttons>
             </a>
          </Menu>
       </StyledCartMenu>

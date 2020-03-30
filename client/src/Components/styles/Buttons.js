@@ -6,7 +6,8 @@ export const Buttons = styled.button`
    padding: 1rem;
    font-weight: bold;
    cursor: pointer;
-   max-width: 15rem;
+   max-width: ${props => (props.width ? props.width : "15rem")};
+   width: 100%;
    margin: auto;
    color: #000;
    transition: 0.2s background;
