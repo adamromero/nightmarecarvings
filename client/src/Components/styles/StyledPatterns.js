@@ -27,8 +27,8 @@ export const StyledPatterns = styled.div`
       font-weight: bold;
       background: #000000;
       border: 0;
-      animation-name: zoomInModified;
-      animation-duration: 0.5s;
+      /*animation-name: zoomInModified;
+      animation-duration: 0.5s;*/
    }
 
    .pattern-image {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
    .header {
-      padding: 0 0 1.2rem;
+      padding: 0;
       position: relative;
       background: #000;
 
@@ -96,6 +96,7 @@ export const StyledHeader = styled.header`
    .header--text-color {
       color: #e88e06;
       transition: 0.2s color;
+
       /*
       &:hover {
          color: #f08405;
@@ -105,6 +106,7 @@ export const StyledHeader = styled.header`
    .header--text {
       font-size: 2rem;
       text-align: center;
+      margin: 2rem 0;
 
       @media screen and (min-width: 40em) {
          font-size: 2.5rem;

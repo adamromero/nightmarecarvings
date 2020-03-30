@@ -13,11 +13,11 @@ const Checkout = () => {
    }
 
    return (
-      <div>
-         <h2>
+      <>
+         <h2 className="animated-heading">
             Checkout ({totalItems} item{totalItems > 1 ? "s" : ""})
          </h2>
-         <div className="checkout">
+         <div className="checkout animated-content">
             <table className="checkout__list">
                <thead>
                   <tr>
@@ -58,7 +58,7 @@ const Checkout = () => {
                <Stripe total={cartTotal} />
             </div>
          </div>
-      </div>
+      </>
    );
 };
 

@@ -28,6 +28,7 @@ ul {
 
 h2 {
    font-size: 1.6rem;
+   margin-top: 0;
 
    @media (min-width: 40em) {
       font-size: 2rem;
@@ -60,7 +61,7 @@ h2 {
 .content {
    flex: 1;
    max-width: 114rem;
-   width: 95%;
+   width: 90%;
    margin: auto;
    text-align: center;
    font-size: 1.4rem;
@@ -68,7 +69,7 @@ h2 {
    min-height: 69vh;
 
    @media (min-width: 40em) {
-      padding: 5rem 0 0;
+      padding: 3rem 0 0;
       font-size: 1.6rem;
    }
 }
@@ -108,16 +109,36 @@ h2 {
    background: rgba(0, 0, 0, 0.3);
 }
 
-.welcome-message {
+.animated-heading {
    animation-name: fadeIn;
-   animation-duration: 3s;
-   font-size: 2.5rem;
-   padding: 0 0 4rem;
+   animation-duration: 1s;
 }
 
-.carousel {
-   animation-name: fadeInUp;
+.animated-content {
+   animation-name: fadeInUpModified;
    animation-duration: 1s;
+}
+
+@keyframes fadeInUpModified {
+   0% {
+      opacity: 0;
+      transform: translate3d(0, 25%, 0);
+   }
+   100% {
+      opacity: 1;
+      transform: translateZ(0);
+   }
+}
+
+.welcome-message {
+   font-size: 1.8rem;
+   padding: 0 0 4rem;
+   line-height: 1.2;
+   margin: 0;
+
+   @media (min-width: 40em) {
+      font-size: 2rem;
+   }
 }
 
 .carousel .thumbs {

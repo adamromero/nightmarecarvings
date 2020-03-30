@@ -28,30 +28,32 @@ class Patterns extends Component {
 
       return (
          <>
-            <h2>Select a pattern</h2>
-            <StyledPatterns>
-               {patterns.map(pattern => (
-                  <button
-                     className="pattern-box"
-                     key={pattern.id}
-                     onClick={() => this.openModal(pattern)}
-                  >
-                     <img
-                        className="pattern-image"
-                        src={`images/${pattern.image}`}
-                        alt={pattern.name}
-                        width="150"
-                     />
-                     <div>{pattern.name}</div>
-                  </button>
-               ))}
-               <ProductModal
-                  show={this.state.showModal}
-                  onHide={this.hideModal}
-                  content={this.state.modalContent}
-                  type="flipInX"
-               />
-            </StyledPatterns>
+            <h2 className="animated-heading">Select a pattern</h2>
+            <div className="animated-content">
+               <StyledPatterns>
+                  {patterns.map(pattern => (
+                     <button
+                        className="pattern-box"
+                        key={pattern.id}
+                        onClick={() => this.openModal(pattern)}
+                     >
+                        <img
+                           className="pattern-image"
+                           src={`images/${pattern.image}`}
+                           alt={pattern.name}
+                           width="150"
+                        />
+                        <div>{pattern.name}</div>
+                     </button>
+                  ))}
+                  <ProductModal
+                     show={this.state.showModal}
+                     onHide={this.hideModal}
+                     content={this.state.modalContent}
+                     type="flipInX"
+                  />
+               </StyledPatterns>
+            </div>
          </>
       );
    }
