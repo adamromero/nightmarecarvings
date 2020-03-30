@@ -28,7 +28,7 @@ app.get("/api/patterns", (req, res) => {
       {
          id: 2,
          image: "vampires-bride.png",
-         name: "Vampires' Wife",
+         name: "Vampires' Bride",
          difficulty: 5,
          price: 100,
          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -60,7 +60,7 @@ app.get("/api/patterns", (req, res) => {
       },
       {
          id: 5,
-         image: "franken-bat.png",
+         image: "bat.png",
          name: "Bat",
          difficulty: 2,
          price: 100,
