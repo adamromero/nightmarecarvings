@@ -4,13 +4,18 @@ const stripe = require("stripe")(keys.STRIPE_SECRET_KEY);
 const cors = require("cors");
 const uuid = require("uuid/v4");
 const dotenv = require("dotenv");
+const cacheTime = 86400000 * 30;
 
 dotenv.config();
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname, "../client/public")));
+app.use(
+   express.static(path.join(__dirname, "../client/public"), {
+      maxAge: cacheTime
+   })
+);
 app.use(express.json());
 app.use(cors());
 
