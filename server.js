@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
    express.static(path.join(__dirname, "../client/public"), {
-      maxAge: cacheTime
+      maxAge: cacheTime,
    })
 );
 app.use(express.json());
@@ -28,18 +28,18 @@ app.get("/api/patterns", (req, res) => {
          difficulty: 4,
          price: 100,
          description: `Begin with carving out the eyes and teeth, then proceed with the vampire's right cheek. 
-         From here, you can then work on the ears, lower jaw and finally the rest of the face in smaller sections.`
+         From here, you can then work on the ears, lower jaw and finally the rest of the face in smaller sections.`,
       },
       {
          id: 2,
          image: "vampires-bride.png",
-         name: "Vampires' Bride",
+         name: "Vampire Bride",
          difficulty: 5,
          price: 100,
          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-         laboris nisi ut aliquip ex ea commodo consequat.`
+         laboris nisi ut aliquip ex ea commodo consequat.`,
       },
       {
          id: 3,
@@ -50,7 +50,7 @@ app.get("/api/patterns", (req, res) => {
          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-         laboris nisi ut aliquip ex ea commodo consequat.`
+         laboris nisi ut aliquip ex ea commodo consequat.`,
       },
       {
          id: 4,
@@ -61,7 +61,7 @@ app.get("/api/patterns", (req, res) => {
          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-         laboris nisi ut aliquip ex ea commodo consequat.`
+         laboris nisi ut aliquip ex ea commodo consequat.`,
       },
       {
          id: 5,
@@ -72,7 +72,7 @@ app.get("/api/patterns", (req, res) => {
          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-         laboris nisi ut aliquip ex ea commodo consequat.`
+         laboris nisi ut aliquip ex ea commodo consequat.`,
       },
       {
          id: 6,
@@ -83,7 +83,7 @@ app.get("/api/patterns", (req, res) => {
          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-         laboris nisi ut aliquip ex ea commodo consequat.`
+         laboris nisi ut aliquip ex ea commodo consequat.`,
       },
       {
          id: 7,
@@ -94,7 +94,7 @@ app.get("/api/patterns", (req, res) => {
          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-         laboris nisi ut aliquip ex ea commodo consequat.`
+         laboris nisi ut aliquip ex ea commodo consequat.`,
       },
       {
          id: 8,
@@ -102,8 +102,8 @@ app.get("/api/patterns", (req, res) => {
          name: "Cat",
          difficulty: 2,
          price: 100,
-         description: `Begin carving on the eyes. Finish by carving out the background of the cat.`
-      }
+         description: `Begin carving on the eyes. Finish by carving out the background of the cat.`,
+      },
    ];
 
    res.json(patterns);
@@ -117,7 +117,7 @@ app.post("/checkout", async (req, res) => {
 
       const customer = await stripe.customers.create({
          email: token.email,
-         source: token.id
+         source: token.id,
       });
 
       const idempotency_key = uuid();
@@ -135,12 +135,12 @@ app.post("/checkout", async (req, res) => {
                   line2: token.card.address_line2,
                   city: token.card.address_city,
                   country: token.card.address_country,
-                  postal_code: token.card.address_zip
-               }
-            }
+                  postal_code: token.card.address_zip,
+               },
+            },
          },
          {
-            idempotency_key
+            idempotency_key,
          }
       );
       console.log("Charge:", { charge });
